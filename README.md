@@ -1,1 +1,13 @@
-# TASK-3
+# TASK-3 Project
+
+##  Completed Tasks
+- [x] Create project structure
+- [x] Upload Java files
+
+##  In Progress
+- [ ] Complete BorderLayout.java
+- [ ] Fix JPanelClass.java
+
+##  To Do
+- [ ] Test all classes
+- [ ] Write documentation
