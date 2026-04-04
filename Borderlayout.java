@@ -1,36 +1,41 @@
 import javax.swing.*;
 import java.awt.*;
-import JPanelsPackage.JPanelsClass;
 
-public class Borderlayout {
+public class GridLayoutApp extends JFrame {
 
-    JFrame BorderFrame;
-    JPanelsClass JP = new JPanelsClass();
+        JPanel panel1, panel2, panel3;
 
-    public Borderlayout() {
-        this.CreateJFrameborderlayout();
+        public GridLayoutApp() {
+            setTitle("Grid Layout Example");
+
+            // Maximize window
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+            // Set layout
+            setLayout(new GridLayout(1, 3));
+
+            // Initialize panels
+            panel1 = new JPanel();
+            panel2 = new JPanel();
+            panel3 = new JPanel();
+
+            // Set background colors
+            panel1.setBackground(Color.RED);
+            panel2.setBackground(Color.GREEN);
+            panel3.setBackground(Color.BLUE);
+
+            // Add panels
+            add(panel1);
+            add(panel2);
+            add(panel3);
+
+            // Close operation
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            setVisible(true);
+            
+
+
+        }
+
     }
-
-    private JFrame CreateJFrameborderlayout() {
-
-        JFrame.setDefaultLookAndFeelDecorated(true);
-
-        BorderFrame = new JFrame("Customized Frame");
-
-        BorderFrame.setSize(600,400);
-        BorderFrame.setLayout(new GridLayout(1,3,10,10));
-
-        BorderFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        BorderFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
-        BorderFrame.add(JP.CreateJPanelOne());
-        BorderFrame.add(JP.CreateJPanelTwo());
-        BorderFrame.add(JP.CreateJPanelThree());
-
-        BorderFrame.setVisible(true);
-
-        return BorderFrame;
-    }
-
-}
+        
